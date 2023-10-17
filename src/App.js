@@ -2,24 +2,24 @@ import logo from './logo.svg';
 import './App.css';
 import * as ReactDOM from "react-dom/client";
 import {
-  Route, Switch, BrowserRouter
+  Route, Routes, BrowserRouter
 } from "react-router-dom";
-import HomePage from "../pages/HomePage";
-import ExperiencePage from "../pages/ExperiencePage";
-import PortfolioPage from "../pages/PortfolioPage";
-import SkillsPage from "../pages/SkillsPage";
+import HomePage from "./Pages/HomePage.jsx";
+import ExperiencePage from "./Pages/ExperiencePage";
+import PortfolioPage from "./Pages/PortfolioPage";
+import SkillsPage from "./Pages/SkillsPage";
 
 function App() {
 
   
   return (
     <BrowserRouter basename='/'>
-      <Switch>
-        <Route exact path='/' component={HomePage}></Route>
+      <Routes>
+        <Route path='/' element={<HomePage/>}></Route>
         <Route exact path='/Experience' component={ExperiencePage}></Route>
         <Route exact path='/Portfolio' component={PortfolioPage}></Route>
         <Route exact path='/Skills' component={SkillsPage}></Route>
-      </Switch>
+      </Routes>
     </BrowserRouter>
     
     // <div className="App">

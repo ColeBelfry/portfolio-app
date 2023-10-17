@@ -1,8 +1,8 @@
-function HomePage(){
+function Footer(){
     return (
         <>
             <div></div>
         </>
     );
 }
-export default HomePage;
+export default Footer;
