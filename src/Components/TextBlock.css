@@ -1,0 +1,12 @@
+.title {
+    margin-bottom: 0px;
+}
+
+.style-line {
+    height: 5px;
+    width: 60px;
+    background-color: #009cff;
+    margin-left: 0px;
+    border: none;
+    border-radius: 5px;
+}

@@ -1,0 +1,26 @@
+.navbar {
+    /* box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
+    border-bottom: 3px solid white; */
+    z-index: 1;
+    /* position: fixed; */
+    width: 100%;
+    height: auto;
+}
+.navLinks {
+    display: flex;
+    justify-content: right;
+    margin: 0px 150px 0px 0px;
+}
+
+.navLinks a {
+    color: white;
+    padding: 12px 16px;
+    display: block;
+    border-bottom: 1px solid white;
+    margin: 0px 20px 0px 20px;
+}
+
+.navLinks a:hover {
+    color: black;
+    background-color: white;
+}
