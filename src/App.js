@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage/>}></Route>
         <Route exact path='/Experience' component={ExperiencePage}></Route>
-        <Route exact path='/Portfolio' component={PortfolioPage}></Route>
+        <Route exact path='/Portfolio' element={<PortfolioPage/>}></Route>
         <Route exact path='/Skills' component={SkillsPage}></Route>
       </Routes>
     </BrowserRouter>
