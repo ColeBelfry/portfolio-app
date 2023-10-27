@@ -1,0 +1,11 @@
+{
+    "projects":[
+        {"image":"Square_Cole_Belfry.png", "name":"ASL GO", "description":"", "date":"", "githubLink":""},
+        {"image":"Square_Cole_Belfry.png", "name":"Quiztopia", "description":"", "date":"", "githubLink":""},
+        {"image":"Square_Cole_Belfry.png", "name":"Wordle Infanite", "description":"", "date":"", "githubLink":""},
+        {"image":"Square_Cole_Belfry.png", "name":"Soup Hero", "description":"", "date":"", "githubLink":""},
+        {"image":"Square_Cole_Belfry.png", "name":"AI Ant Maze", "description":"", "date":"", "githubLink":""},
+        {"image":"Square_Cole_Belfry.png", "name":"Scamper Fitness App", "description":"", "date":"", "githubLink":""},
+        {"image":"Square_Cole_Belfry.png", "name":"", "description":"", "date":"", "githubLink":""}
+    ]
+}

@@ -1,0 +1,29 @@
+.card{
+    width: 200px;
+    height: auto;
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.selected-card{
+    width: 200px;
+    height: auto;
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 4px solid blue;
+}
+
+.empty-card{
+    width: 200px;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: grey;
+}
+
+.card-body {
+    padding: 5px;
+    text-align: center;
+}

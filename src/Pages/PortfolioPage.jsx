@@ -4,10 +4,25 @@ import React, { Component, useState, useEffect } from 'react';
 import Header from '../Components/Header.jsx';
 import Footer from '../Components/Footer.jsx';
 import TextBlock from '../Components/TextBlock.jsx';
+import SlideShow from '../Components/SlideShow.jsx';
+import ProjectCard from '../Components/ProjectCard.jsx';
 
 function PortfolioPage(){
     const [projects, setProjects] = useState([{image: "Square_Cole_Belfry.png", name: "test", description: "this is filler text"}]);
     const [projectIndex, setProjectIndex] = useState(0);
+
+    async function loadJSON(){
+        const response = await fetch("projects.json");
+        let json = await response.json();
+        return json;
+    }
+
+    async function setJSON(){
+        let jsonData = await loadJSON();
+        console.log(jsonData);
+        //var projectsList = JSON.parse(jsonData);
+        setProjects(jsonData.projects);
+    }
 
     const onClickForward = () => {
         if(projects.length-1 > projectIndex) {
@@ -21,17 +36,38 @@ function PortfolioPage(){
         }
     }
 
+    const displayProjects = () => {
+        if(projects.length < 2){
+            return <div><img src={projects[projectIndex].image}/></div>
+        }
+        if(projectIndex === 0) {
+            return <div style={{display: "flex"}}><ProjectCard type="blank"/><ProjectCard type="selected" src={projects[projectIndex].image} name={projects[projectIndex].name} description={projects[projectIndex].description}/><ProjectCard src={projects[projectIndex + 1].image} name={projects[projectIndex + 1].name} description={projects[projectIndex + 1].description}/></div>
+        }
+        if(projectIndex === projects.length - 1) {
+            return <div style={{display: "flex"}}><ProjectCard src={projects[projectIndex - 1].image} name={projects[projectIndex - 1].name} description={projects[projectIndex - 1].description}/><ProjectCard type="selected" src={projects[projectIndex].image} name={projects[projectIndex].name} description={projects[projectIndex].description}/><ProjectCard type="blank"/></div>
+        }
+        return <div style={{display: "flex"}}><ProjectCard src={projects[projectIndex - 1].image} name={projects[projectIndex - 1].name} description={projects[projectIndex - 1].description}/><ProjectCard type="selected" src={projects[projectIndex].image} name={projects[projectIndex].name} description={projects[projectIndex].description}/><ProjectCard src={projects[projectIndex + 1].image} name={projects[projectIndex + 1].name} description={projects[projectIndex + 1].description}/></div>
+    }
+
     useEffect(() => {
         // decode json file and populate projects list
-    });
+        setJSON();
+    }, []);
+    console.log(projects);
     return (
         <>
-            <div className="portfolio-banner" style={{backgroundImage: projects[projectIndex].image}}>
+            <div className="portfolio-banner">
                 <Header/>
+                <SlideShow/>
                 <div className="slideshow-container">
-                    <div className="prev-btn">p</div>
-                    <img src={projects[projectIndex].image}/>
-                    <div className="next-btn">n</div>
+                    <div className="prev-btn" onClick={() => onClickBack()}>
+                        <img src='back_icon.png'/>
+                    </div>
+                    {displayProjects()}
+                    {/* <img src={projects[projectIndex].image}/> */}
+                    <div className="next-btn" onClick={() => onClickForward()}>
+                        <img src='continue_icon.png'/>
+                    </div>
                 </div>
             </div>
             <div className="body-container">
