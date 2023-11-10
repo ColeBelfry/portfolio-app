@@ -1,8 +1,8 @@
 {
     "projects":[
-        {"image":"Square_Cole_Belfry.png", "name":"ASL GO", "description":"", "date":"", "githubLink":""},
-        {"image":"Square_Cole_Belfry.png", "name":"Quiztopia", "description":"", "date":"", "githubLink":""},
-        {"image":"Square_Cole_Belfry.png", "name":"Wordle Infinite", "description":"", "date":"", "githubLink":""},
+        {"image":"Square_Cole_Belfry.png", "name":"ASL GO", "description":"A sign language translation app", "date":"", "githubLink":""},
+        {"image":"Square_Cole_Belfry.png", "name":"Quiztopia", "description":"A website to create and play quizzes", "date":"", "githubLink":""},
+        {"image":"Square_Cole_Belfry.png", "name":"Wordle Infinite", "description":"An endless spin on the popular New York times game", "date":"", "githubLink":""},
         {"image":"Square_Cole_Belfry.png", "name":"Soup Hero", "description":"", "date":"", "githubLink":""},
         {"image":"Square_Cole_Belfry.png", "name":"AI Ant Maze", "description":"", "date":"", "githubLink":""},
         {"image":"Square_Cole_Belfry.png", "name":"Scamper Fitness App", "description":"", "date":"", "githubLink":""},

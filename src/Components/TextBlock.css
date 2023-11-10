@@ -10,3 +10,12 @@
     border: none;
     border-radius: 5px;
 }
+
+.revealUp {
+    opacity: 0;
+    visibility: hidden;
+}
+.spacer {
+    height: 50vh;
+    background-color: #000;
+}

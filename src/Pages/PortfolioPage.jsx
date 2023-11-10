@@ -27,12 +27,16 @@ function PortfolioPage(){
     const onClickForward = () => {
         if(projects.length-1 > projectIndex) {
             setProjectIndex(projectIndex + 1);
+        }else {
+            setProjectIndex(0);
         }
     }
 
     const onClickBack = () => {
         if(projectIndex !== 0){
             setProjectIndex(projectIndex - 1);
+        } else {
+            setProjectIndex(projects.length - 1);
         }
     }
 
@@ -41,10 +45,10 @@ function PortfolioPage(){
             return <div><img src={projects[projectIndex].image}/></div>
         }
         if(projectIndex === 0) {
-            return <div style={{display: "flex"}}><ProjectCard type="blank"/><ProjectCard type="selected" src={projects[projectIndex].image} name={projects[projectIndex].name} description={projects[projectIndex].description}/><ProjectCard src={projects[projectIndex + 1].image} name={projects[projectIndex + 1].name} description={projects[projectIndex + 1].description}/></div>
+            return <div style={{display: "flex"}}><ProjectCard src={projects[projects.length - 1].image} name={projects[projects.length - 1].name} description={projects[projects.length - 1].description}/><ProjectCard type="selected" src={projects[projectIndex].image} name={projects[projectIndex].name} description={projects[projectIndex].description}/><ProjectCard src={projects[projectIndex + 1].image} name={projects[projectIndex + 1].name} description={projects[projectIndex + 1].description}/></div>
         }
         if(projectIndex === projects.length - 1) {
-            return <div style={{display: "flex"}}><ProjectCard src={projects[projectIndex - 1].image} name={projects[projectIndex - 1].name} description={projects[projectIndex - 1].description}/><ProjectCard type="selected" src={projects[projectIndex].image} name={projects[projectIndex].name} description={projects[projectIndex].description}/><ProjectCard type="blank"/></div>
+            return <div style={{display: "flex"}}><ProjectCard src={projects[projectIndex - 1].image} name={projects[projectIndex - 1].name} description={projects[projectIndex - 1].description}/><ProjectCard type="selected" src={projects[projectIndex].image} name={projects[projectIndex].name} description={projects[projectIndex].description}/><ProjectCard src={projects[0].image} name={projects[0].name} description={projects[0].description}/></div>
         }
         return <div style={{display: "flex"}}><ProjectCard src={projects[projectIndex - 1].image} name={projects[projectIndex - 1].name} description={projects[projectIndex - 1].description}/><ProjectCard type="selected" src={projects[projectIndex].image} name={projects[projectIndex].name} description={projects[projectIndex].description}/><ProjectCard src={projects[projectIndex + 1].image} name={projects[projectIndex + 1].name} description={projects[projectIndex + 1].description}/></div>
     }

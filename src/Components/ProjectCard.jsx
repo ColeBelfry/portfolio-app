@@ -8,7 +8,7 @@ function ProjectCard(props){
 
     const getCard = () => {
         if(props.type === "selected"){
-            return <div className="selected-card">
+            return <div className="card selected shadow">
             <img src={props.src}/>
             <div className="card-body">
                 <h4>{props.name}</h4>
@@ -17,10 +17,10 @@ function ProjectCard(props){
         </div>
         }
         else if(props.type === "blank"){
-            return <div className="empty-card">
+            return <div className="card empty shadow">
         </div>
         } else{
-            return <div className="card">
+            return <div className="card shadow">
                 <img src={props.src}/>
                 <div className="card-body">
                     <h4>{props.name}</h4>
